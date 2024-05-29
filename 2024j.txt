@@ -1,0 +1,58 @@
+Certainly, Necati! Here’s the updated self-review incorporating the specific examples into the relevant sections.
+
+---
+
+**Self-Review: Necati Arslan**
+
+As a data engineer in the C-3PO team, I have dedicated myself to the successful delivery of the Voyager project, leveraging a variety of AWS technologies to achieve our goals. This self-review highlights my contributions, technical expertise, and the key behaviors I exhibit that align with our team’s values and objectives.
+
+### Technical Contributions and Achievements
+
+1. **Design and Implementation of CMD_Customer DynamoDB Table**:
+   - Designed the `cmd_customer` DynamoDB table, a core component of the Voyager project, ensuring it meets the project's high demands for performance and scalability. The design included a thorough analysis of attributes, attribute sizes, GSI usage, workload, RCU, and WCU requirements, making it a robust solution for customer data storage.
+
+2. **Development of Lambda Functions**:
+   - Developed critical AWS Lambda functions that read from DynamoDB streams and write to OneLake via OneStream APIs. This functionality is vital for ensuring real-time data processing and integration across our data infrastructure.
+   - Successfully implemented and tested the Lambda function for processing DynamoDB streams in the QA environment, ensuring accurate and efficient data flow to the real-time dataset.
+
+3. **Data Integration and Deployment**:
+   - Oversaw the exchange registration process in both QA and PROD environments, ensuring real-time and batch Voyager datasets are correctly registered with proper load patterns and partition configurations.
+
+4. **Integration Testing**:
+   - Completed comprehensive integration tests for all Voyager components. Prepared detailed test scenarios, ensured all components were thoroughly tested, and collaborated with teams to resolve any bugs. These efforts were instrumental in maintaining the reliability and performance of our system.
+
+5. **Production Deployment and Failover**:
+   - Led the production deployment of the `cmd_customer` DynamoDB table and coordinated the successful failover of components to the West region. Updated the Trex playbook to reflect these changes, ensuring operational readiness and resilience.
+
+6. **Bite-Sized Learning Session**:
+   - Presented a session on DynamoDB single table design during the Bite-Sized Learning presentation on April 19. Covered DynamoDB basics, table design, and GSI usage, helping team members enhance their understanding and application of these concepts.
+
+7. **Collaboration and Continuous Improvement**:
+   - Collaborated with Matt on FPDC, Dapp & Vail data flow validation, adding DynamoDB reader and writer tasks. Reviewed PRs and discussed design improvements, demonstrating a commitment to continuous improvement and code quality.
+
+### Key Behaviors and Professional Development
+
+- **Active Participation and Leadership**:
+   - Actively participated in Voyager Dataset design sessions, bringing my own offers and ideas to enhance the design process.
+   - Worked with Ethen to go through the Streaming Lambda DQL design and requirements, reviewed the development, and provided feedback, demonstrating leadership in ensuring the project's success.
+   - Coordinated releases and implementations across multiple teams, ensuring smooth transitions and minimal disruptions to our workflows.
+
+- **Effective Communication and Feedback**:
+   - Demonstrated strong communication skills by effectively presenting complex concepts to groups and delivering constructive feedback that fosters team growth and collaboration.
+   - Led the Bite-Sized Learning session and Integration Test Scenario meeting with the leadership, ensuring clear communication and understanding of critical aspects of our project.
+   - Engaged in product and design conversations with a customer-centric approach, ensuring our solutions meet user needs and expectations.
+
+- **Proactive Problem Solving**:
+   - Identified and addressed problems beyond the initial scope, providing innovative solutions that benefit the broader team. Proactively identified issues and opportunities, progressing projects efficiently.
+   - Planned tasks and deliverables autonomously, communicated effectively with team members and leadership, and escalated impediments as necessary to maintain project momentum.
+
+- **Technical Expertise and Knowledge Sharing**:
+   - Leveraged broad and deep knowledge of the technology stack, playing a significant role in designing end-to-end solutions for feature delivery. Provided professional and technical advice sought by peers, contributing to the team's overall knowledge and capability.
+   - Presented the Bite-Sized Learning session, demonstrating a commitment to knowledge sharing and team development.
+   - Consistently met delivery timelines, supported the broader team in meeting deadlines, and provided updates on work progress and status.
+
+In conclusion, my tenure on the C-3PO team and my work on the Voyager project have allowed me to grow both technically and professionally. I am proud of the contributions I have made and the positive impact they have had on our team's success. I look forward to continuing to drive innovation and excellence in our projects.
+
+---
+
+This updated self-review now includes the specific examples in the relevant sections, enhancing the detail and showcasing your active participation, leadership, and technical expertise. Adjust any sections as needed to better fit your personal experiences and achievements.
