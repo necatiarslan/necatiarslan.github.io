@@ -1,81 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             text-align: center;
         }
-        
-        .header h1 {
-            margin: 0;
-        }
-        
-        .bio {
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-        .bio p {
+        h1 {
+            color: #333;
+        }
+        .section {
             margin-bottom: 20px;
         }
-        
-        .contacts {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-top: 1px solid #ddd;
+        .section h2 {
+            color: #555;
         }
-        
-        .contacts ul {
+        ul {
             list-style: none;
             padding: 0;
-            margin: 0;
         }
-        
-        .contacts li {
-            margin-bottom: 10px;
-        }
-        
-        .contacts a {
-            color: #337ab7;
-            text-decoration: none;
-        }
-        
-        .contacts a:hover {
-            color: #23527c;
+        ul li {
+            background: #eaeaea;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Your Name</h1>
-        </div>
-        <div class="bio">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        </div>
-        <div class="contacts">
+        <h1>Necati's Bio</h1>
+        
+        <div class="section">
+            <h2>Experience</h2>
             <ul>
-                <li><a href="mailto:your@email.com">your@email.com</a></li>
-                <li><a href="https://www.linkedin.com/in/yourlinkedinprofile">LinkedIn</a></li>
-                <li><a href="https://www.twitter.com/yourtwitterhandle">Twitter</a></li>
+                <li>Developer of Airflow VSCode extension (20K installs)</li>
+                <li>Software Developer with expertise in Python and VSCode extension development</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>ESL Student</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Not specified</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Airflow VSCode Extension</li>
+                <li>Other Python-based projects</li>
             </ul>
         </div>
     </div>
