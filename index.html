@@ -1,293 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necati Arslan - Senior Data Engineer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <meta name="description"
+        content="Necati Arslan - Senior Data Architect & AWS Cloud Expert | Specializing in Big Data, ETL, Cloud Architecture, and Open Source Development">
+    <meta name="keywords" content="Data Engineer, AWS, Cloud Architecture, Open Source, Python, Big Data, ETL">
+    <meta name="author" content="Necati Arslan">
+    <meta property="og:title" content="Necati Arslan - Data Architect & AWS Cloud Expert">
+    <meta property="og:description" content="Building scalable data solutions and contributing to open source">
+    <meta property="og:type" content="website">
+    <title>Necati Arslan | Data Architect & AWS Cloud Expert</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'void': '#0a0a0f',
+                        'deep': '#12121a',
+                        'surface': '#1a1a24',
+                        'elevated': '#24243a',
+                        'border': '#2a2a3e',
+                        'muted': '#6b7280',
+                        'aws': {
+                            'orange': '#ff9900',
+                            'light': '#ffb84d',
+                        },
+                        'cyber': {
+                            'blue': '#00d4ff',
+                            'purple': '#7c3aed',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(255, 153, 0, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(255, 153, 0, 0.6)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            scrollbar-width: thin;
+            scrollbar-color: #2a2a3e #0a0a0f;
         }
 
-        body {
-            background: #f3f4f6;
-            color: #1f2937;
-            line-height: 1.6;
+        *::-webkit-scrollbar {
+            width: 8px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
+        *::-webkit-scrollbar-track {
+            background: #0a0a0f;
         }
 
-        .section {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        *::-webkit-scrollbar-thumb {
+            background: #2a2a3e;
+            border-radius: 4px;
         }
 
-        .section h2 {
-            color: #1f2937;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+        .glass {
+            background: rgba(26, 26, 36, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(42, 42, 62, 0.5);
         }
 
-        .profile-info h1 {
-            font-size: 2rem;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
+        .glass-strong {
+            background: rgba(26, 26, 36, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(42, 42, 62, 0.7);
         }
 
-        .profile-info h3 {
-            font-size: 1.25rem;
-            color: #4b5563;
-            margin-bottom: 1rem;
-            font-weight: normal;
+        .gradient-text {
+            background: linear-gradient(135deg, #ff9900 0%, #00d4ff 50%, #7c3aed 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 8s ease infinite;
         }
 
-        .social-links a {
-            color: #3b82f6;
-            text-decoration: none;
-            margin-right: 1rem;
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 153, 0, 0.1), rgba(0, 212, 255, 0.1));
         }
 
-        .social-links a:hover {
-            text-decoration: underline;
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, #ff9900, #00d4ff, #7c3aed);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
         }
 
-        .experience-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
+        .gradient-border:hover::before {
+            opacity: 1;
         }
 
-        .experience-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .hero-gradient {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 153, 0, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(0, 212, 255, 0.1), transparent),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(124, 58, 237, 0.1), transparent);
         }
 
-        .experience-item h3 {
-            font-size: 1.25rem;
-            color: #1f2937;
-            margin-bottom: 0.25rem;
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .experience-item .position {
-            color: #3b82f6;
-            font-weight: 500;
-            margin-bottom: 0.25rem;
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        .experience-item .date {
-            color: #6b7280;
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
+        .sponsor-glow {
+            box-shadow: 0 0 30px rgba(255, 153, 0, 0.2),
+                inset 0 0 30px rgba(255, 153, 0, 0.05);
         }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        .sponsor-glow:hover {
+            box-shadow: 0 0 50px rgba(255, 153, 0, 0.4),
+                inset 0 0 40px rgba(255, 153, 0, 0.1);
         }
 
-        .skill-tag {
-            background: #f3f4f6;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.875rem;
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(42, 42, 62, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(42, 42, 62, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
-        .project-group {
-            margin-bottom: 2rem;
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .project-group h3 {
-            color: #1f2937;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .project-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
+        .tech-tag {
+            background: linear-gradient(135deg, rgba(255, 153, 0, 0.15), rgba(0, 212, 255, 0.15));
+            border: 1px solid rgba(255, 153, 0, 0.3);
         }
 
-        .project-item {
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 6px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .project-item h4 {
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-item p {
-            color: #4b5563;
-            font-size: 0.875rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .section {
-                padding: 1.5rem;
-            }
-
-            .project-list {
-                grid-template-columns: 1fr;
-            }
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            animation: float 8s ease-in-out infinite;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="section profile-info">
-            <h1>Necati Arslan</h1>
-            <h3>AWS Big Data Engineer at Capital One</h3>
-            <div class="social-links">
-                <a href="mailto:necatia@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/necati-arslan" target="_blank">LinkedIn</a>
-                <a href="https://github.com/necatiarslan" target="_blank">GitHub</a>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2>Summary</h2>
-            <p>Senior Data Engineer with extensive experience in transforming data into actionable insights. Proven expertise in AWS, Python, Airflow, Spark, and various data engineering tools. Currently working at Capital One, with previous experience at Facebook and Verizon.</p>
-        </div>
-
-        <div class="section">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Capital One</h3>
-                <div class="position">Senior Data Engineer</div>
-                <div class="date">March 2022 - Present</div>
-                <p>Developing batch and streaming pipelines on AWS for marketing campaigns.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Facebook</h3>
-                <div class="position">Senior Data Engineer</div>
-                <div class="date">April 2021 - February 2022</div>
-                <p>Part of the infrastructure data analytics team, working with Facebook data tools including Hive, Presto, and Spark.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Verizon</h3>
-                <div class="position">Senior Data Engineer</div>
-                <div class="date">April 2019 - April 2021</div>
-                <p>Developed data backend for Global Supplier Insights Dashboard project.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Open Source Projects</h2>
-            <div class="project-group">
-                <h3>VSCode Extensions</h3>
-                <div class="project-list">
-                    <div class="project-item">
-                        <h4>AWS S3</h4>
-                        <p>Interact with your AWS S3 buckets directly from VSCode.</p>
-                        <a href="https://bit.ly/vscode-aws-s3" target="_blank">Marketplace</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>AWS Lambda</h4>
-                        <p>Update, Trigger & Monitor your AWS Lambda Functions.</p>
-                        <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-lambda-vscode-extension" target="_blank">Marketplace</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>AWS SNS</h4>
-                        <p>Manage & Monitor & Push Messages to AWS SNS Topics.</p>
-                        <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-sns-vscode-extension" target="_blank">Marketplace</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>AWS CloudWatch</h4>
-                        <p>Monitor logs and metrics effortlessly.</p>
-                        <a href="https://bit.ly/aws-cloudwatch-vscode-extension" target="_blank">Marketplace</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>Apache Airflow</h4>
-                        <p>Simplify Airflow DAG management and debugging.</p>
-                        <a href="https://bit.ly/airflow-vscode-extension" target="_blank">Marketplace</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>Aws Access</h4>
-                        <p>Easily manage AWS credentials and profiles.</p>
-                        <a href="https://bit.ly/aws-access-vscode-extension" target="_blank">Marketplace</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-group">
-                <h3>Python Packages</h3>
-                <div class="project-list">
-                    <div class="project-item">
-                        <h4>Table Faker</h4>
-                        <p>Generate realistic tabular data for testing.</p>
-                        <a href="https://pypi.org/project/tablefaker/" target="_blank">PyPI</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>DynamoDB Faker</h4>
-                        <p>Create mock data for AWS DynamoDB effortlessly.</p>
-                        <a href="https://pypi.org/project/dynamodbfaker/" target="_blank">PyPI</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>JSON Data Faker</h4>
-                        <p>Generate fake JSON data for development and testing.</p>
-                        <a href="https://pypi.org/project/jsondatafaker/" target="_blank">PyPI</a>
-                    </div>
-                    <div class="project-item">
-                        <h4>Lambda Faker</h4>
-                        <p>Simulate AWS Lambda function payloads with ease.</p>
-                        <a href="https://pypi.org/project/lambdafaker/" target="_blank">PyPI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Spark</span>
-                <span class="skill-tag">Data Lake</span>
-                <span class="skill-tag">Airflow</span>
-                <span class="skill-tag">DataBricks</span>
-                <span class="skill-tag">Dynamodb</span>
-                <span class="skill-tag">Glue</span>
-                <span class="skill-tag">Lambda</span>
-                <span class="skill-tag">Sns / Sqs</span>
-                <span class="skill-tag">C#</span>
-                <span class="skill-tag">Sql Server</span>
-                <span class="skill-tag">Oracle</span>
-                <span class="skill-tag">...</span>
-            </div>
-        </div>
+<body class="bg-void text-white font-sans antialiased overflow-x-hidden">
+    <!-- Floating Background Orbs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="floating-orb w-96 h-96 bg-aws-orange/20 top-1/4 -left-48" style="animation-delay: 0s;"></div>
+        <div class="floating-orb w-80 h-80 bg-cyber-blue/20 top-1/2 -right-40" style="animation-delay: 2s;"></div>
+        <div class="floating-orb w-72 h-72 bg-cyber-purple/20 bottom-1/4 left-1/3" style="animation-delay: 4s;"></div>
     </div>
 
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-strong">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="font-mono font-semibold text-lg tracking-tight">
+                    <span class="text-aws-orange">&lt;</span>
+                    <span class="text-white">NA</span>
+                    <span class="text-aws-orange">/&gt;</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#expertise"
+                        class="text-muted hover:text-white transition-colors text-sm font-medium">Expertise</a>
+                    <a href="#opensource" class="text-muted hover:text-white transition-colors text-sm font-medium">Open
+                        Source</a>
+                    <a href="#projects"
+                        class="text-muted hover:text-white transition-colors text-sm font-medium">Projects</a>
+                    <a href="https://github.com/sponsors/necatiarslan" target="_blank"
+                        class="px-4 py-2 bg-gradient-to-r from-aws-orange to-aws-light text-void font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                        Sponsor
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-strong border-t border-border">
+            <div class="px-6 py-4 flex flex-col gap-4">
+                <a href="#expertise"
+                    class="text-muted hover:text-white transition-colors text-sm font-medium">Expertise</a>
+                <a href="#opensource" class="text-muted hover:text-white transition-colors text-sm font-medium">Open
+                    Source</a>
+                <a href="#projects"
+                    class="text-muted hover:text-white transition-colors text-sm font-medium">Projects</a>
+                <a href="https://github.com/sponsors/necatiarslan" target="_blank"
+                    class="px-4 py-2 bg-gradient-to-r from-aws-orange to-aws-light text-void font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity flex items-center gap-2 justify-center">
+                    <i data-lucide="heart" class="w-4 h-4"></i>
+                    Sponsor
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative hero-gradient grid-pattern pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-in">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-sm text-muted">Available for consulting</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                        <span class="text-white">Data Architecture</span><br>
+                        <span class="gradient-text">AWS Cloud</span><br>
+                        <span class="text-white">& Open Source</span>
+                    </h1>
+
+                    <p class="text-xl text-muted leading-relaxed mb-8 max-w-xl">
+                        Senior Data Architect specializing in building scalable, cloud-native data solutions.
+                        Passionate about AWS, Big Data technologies, and contributing to the open source community.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/necatiarslan" target="_blank"
+                            class="group px-6 py-3 glass gradient-border rounded-xl font-medium flex items-center gap-3 hover:bg-elevated transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                            GitHub Profile
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/necati-arslan/" target="_blank"
+                            class="px-6 py-3 glass rounded-xl font-medium flex items-center gap-3 hover:bg-elevated transition-colors border border-border">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-[#0077b5]"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Pills -->
+                    <div class="mt-12 flex flex-wrap gap-3">
+                        <span class="px-3 py-1.5 tech-tag rounded-full text-xs font-mono text-aws-orange">AWS</span>
+                        <span class="px-3 py-1.5 tech-tag rounded-full text-xs font-mono text-cyber-blue">Python</span>
+                        <span class="px-3 py-1.5 tech-tag rounded-full text-xs font-mono text-cyber-purple">Big
+                            Data</span>
+                        <span class="px-3 py-1.5 tech-tag rounded-full text-xs font-mono text-green-400">ETL</span>
+                        <span
+                            class="px-3 py-1.5 tech-tag rounded-full text-xs font-mono text-pink-400">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative hidden lg:block animate-in" style="animation-delay: 0.2s;">
+                    <div class="relative w-full aspect-square">
+                        <!-- Code Block Visual -->
+                        <div class="absolute inset-0 glass rounded-3xl p-6 font-mono text-sm overflow-hidden">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-4 text-muted text-xs">architect.py</span>
+                            </div>
+                            <pre
+                                class="text-muted leading-relaxed"><code><span class="text-cyber-purple">class</span> <span class="text-aws-orange">DataArchitect</span>:
+    <span class="text-cyber-purple">def</span> <span class="text-cyber-blue">__init__</span>(self):
+        self.name = <span class="text-green-400">"Necati Arslan"</span>
+        self.role = <span class="text-green-400">"Senior Data Architect"</span>
+        self.cloud = [<span class="text-green-400">"AWS"</span>, <span class="text-green-400">"Azure"</span>]
+        
+    <span class="text-cyber-purple">def</span> <span class="text-cyber-blue">build</span>(self, solution):
+        <span class="text-muted"># Scalable & Cloud-Native</span>
+        <span class="text-cyber-purple">return</span> self.architect(
+            data_lake=<span class="text-aws-orange">True</span>,
+            realtime=<span class="text-aws-orange">True</span>,
+            open_source=<span class="text-aws-orange">True</span>
+        )
+        
+    <span class="text-cyber-purple">def</span> <span class="text-cyber-blue">contribute</span>(self):
+        <span class="text-muted"># Open Source First</span>
+        <span class="text-cyber-purple">return</span> <span class="text-green-400">"github.com/necatiarslan"</span></code></pre>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div
+                            class="absolute -top-4 -right-4 w-20 h-20 glass rounded-2xl flex items-center justify-center animate-float">
+                            <i data-lucide="cloud" class="w-10 h-10 text-aws-orange"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 glass rounded-2xl flex items-center justify-center animate-float"
+                            style="animation-delay: 1s;">
+                            <i data-lucide="database" class="w-8 h-8 text-cyber-blue"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-xs text-muted">Scroll</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-muted"></i>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-white">Core </span>
+                    <span class="gradient-text">Expertise</span>
+                </h2>
+                <p class="text-muted text-lg max-w-2xl mx-auto">
+                    Specialized in designing and implementing enterprise-grade data solutions
+                    across cloud platforms and modern data stacks.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- AWS Card -->
+                <div class="glass rounded-3xl p-8 card-hover gradient-border animate-in">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-aws-orange/20 to-aws-light/20 flex items-center justify-center mb-6">
+                        <i data-lucide="cloud" class="w-8 h-8 text-aws-orange"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">AWS Cloud</h3>
+                    <p class="text-muted mb-6 leading-relaxed">
+                        Expert in AWS services including S3, Lambda, Glue, Athena, Redshift,
+                        EMR, and more. Building serverless and cost-effective architectures.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">S3</span>
+                        <span
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Lambda</span>
+                        <span
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Glue</span>
+                        <span
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Athena</span>
+                    </div>
+                </div>
+
+                <!-- Data Engineering Card -->
+                <div class="glass rounded-3xl p-8 card-hover gradient-border animate-in" style="animation-delay: 0.1s;">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyber-blue/20 to-cyber-purple/20 flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="w-8 h-8 text-cyber-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Data Engineering</h3>
+                    <p class="text-muted mb-6 leading-relaxed">
+                        Designing robust ETL/ELT pipelines, data lakes, and warehouses.
+                        Experience with Spark, Airflow, and modern data orchestration tools.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">Spark</span>
+                        <span
+                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">Airflow</span>
+                        <span
+                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">ETL</span>
+                        <span
+                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">dbt</span>
+                    </div>
+                </div>
+
+                <!-- Open Source Card -->
+                <div class="glass rounded-3xl p-8 card-hover gradient-border animate-in" style="animation-delay: 0.2s;">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyber-purple/20 to-pink-500/20 flex items-center justify-center mb-6">
+                        <i data-lucide="git-branch" class="w-8 h-8 text-cyber-purple"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Open Source</h3>
+                    <p class="text-muted mb-6 leading-relaxed">
+                        Active contributor to open source projects. Building developer tools,
+                        VS Code extensions, and utilities for the community.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-cyber-purple/10 text-cyber-purple text-xs rounded-full font-mono">Python</span>
+                        <span
+                            class="px-3 py-1 bg-cyber-purple/10 text-cyber-purple text-xs rounded-full font-mono">TypeScript</span>
+                        <span class="px-3 py-1 bg-cyber-purple/10 text-cyber-purple text-xs rounded-full font-mono">VS
+                            Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source & Sponsorship Section -->
+    <section id="opensource" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-in">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-aws-orange/10 border border-aws-orange/30 rounded-full mb-6">
+                        <i data-lucide="star" class="w-4 h-4 text-aws-orange"></i>
+                        <span class="text-sm text-aws-orange font-medium">GitHub Sponsor</span>
+                    </div>
+
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="text-white">Supporting </span>
+                        <span class="gradient-text">Open Source</span>
+                    </h2>
+
+                    <p class="text-muted text-lg leading-relaxed mb-8">
+                        I believe in the power of open source software. My projects help thousands of developers
+                        work more efficiently with AWS, Airflow, and data engineering tools.
+                        Your sponsorship helps maintain and improve these tools.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-10">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-aws-orange mb-1" id="stars-count">1000+</div>
+                            <div class="text-sm text-muted">GitHub Stars</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cyber-blue mb-1" id="repos-count">20+</div>
+                            <div class="text-sm text-muted">Repositories</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cyber-purple mb-1" id="downloads-count">50K+</div>
+                            <div class="text-sm text-muted">Downloads</div>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/sponsors/necatiarslan" target="_blank"
+                        class="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-aws-orange to-aws-light text-void font-bold rounded-2xl text-lg hover:shadow-lg hover:shadow-aws-orange/25 transition-all sponsor-glow">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                        Become a Sponsor
+                        <i data-lucide="arrow-right"
+                            class="w-5 h-5 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Sponsor Benefits Card -->
+                <div class="glass rounded-3xl p-8 sponsor-glow animate-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-aws-orange to-aws-light flex items-center justify-center">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-void"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Sponsor Benefits</h3>
+                            <p class="text-sm text-muted">Support open source development</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-medium">Priority Support</span>
+                                <p class="text-sm text-muted">Get faster responses on issues and feature requests</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-medium">Early Access</span>
+                                <p class="text-sm text-muted">Be the first to try new features and tools</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-medium">Recognition</span>
+                                <p class="text-sm text-muted">Your name featured in project READMEs</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-white font-medium">Community</span>
+                                <p class="text-sm text-muted">Join an exclusive community of supporters</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-white">Featured </span>
+                    <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-muted text-lg max-w-2xl mx-auto">
+                    Open source tools and extensions built to help developers
+                    work more efficiently with cloud and data technologies.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-aws-orange/20 to-aws-light/20 flex items-center justify-center">
+                            <i data-lucide="workflow" class="w-6 h-6 text-aws-orange"></i>
+                        </div>
+                        <div class="flex items-center gap-2 text-muted text-sm">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AWS AI Assistant</h3>
+                    <p class="text-muted text-sm mb-4 leading-relaxed">
+                        VS Code extension for AI-powered AWS development. Manage cloud resources directly from your
+                        editor.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">VS Code</span>
+                    </div>
+                    <a href="https://github.com/necatiarslan/aws-ai-assistant" target="_blank"
+                        class="flex items-center gap-2 text-aws-orange text-sm font-medium hover:underline">
+                        View on GitHub
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.1s;">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-blue/20 to-cyan-500/20 flex items-center justify-center">
+                            <i data-lucide="wind" class="w-6 h-6 text-cyber-blue"></i>
+                        </div>
+                        <div class="flex items-center gap-2 text-muted text-sm">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Airflow VS Code Extension</h3>
+                    <p class="text-muted text-sm mb-4 leading-relaxed">
+                        Manage Apache Airflow DAGs, monitor runs, and debug pipelines directly within VS Code.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Airflow</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Python</span>
+                    </div>
+                    <a href="https://github.com/necatiarslan/airflow-vscode-extension" target="_blank"
+                        class="flex items-center gap-2 text-cyber-blue text-sm font-medium hover:underline">
+                        View on GitHub
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-purple/20 to-pink-500/20 flex items-center justify-center">
+                            <i data-lucide="file-json" class="w-6 h-6 text-cyber-purple"></i>
+                        </div>
+                        <div class="flex items-center gap-2 text-muted text-sm">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AWS S3 Explorer</h3>
+                    <p class="text-muted text-sm mb-4 leading-relaxed">
+                        Browse, manage, and interact with AWS S3 buckets and objects from your VS Code workspace.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">S3</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS SDK</span>
+                    </div>
+                    <a href="https://github.com/necatiarslan/aws-s3-vscode-extension" target="_blank"
+                        class="flex items-center gap-2 text-cyber-purple text-sm font-medium hover:underline">
+                        View on GitHub
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+                            <i data-lucide="table" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <div class="flex items-center gap-2 text-muted text-sm">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AWS DynamoDB Explorer</h3>
+                    <p class="text-muted text-sm mb-4 leading-relaxed">
+                        Query, scan, and manage DynamoDB tables with an intuitive VS Code interface.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">DynamoDB</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">NoSQL</span>
+                    </div>
+                    <a href="https://github.com/necatiarslan/aws-dynamodb-vscode-extension" target="_blank"
+                        class="flex items-center gap-2 text-green-400 text-sm font-medium hover:underline">
+                        View on GitHub
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.4s;">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+                            <i data-lucide="key" class="w-6 h-6 text-yellow-400"></i>
+                        </div>
+                        <div class="flex items-center gap-2 text-muted text-sm">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AWS Secrets Manager</h3>
+                    <p class="text-muted text-sm mb-4 leading-relaxed">
+                        Securely access and manage AWS Secrets Manager secrets from within VS Code.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Security</span>
+                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS</span>
+                    </div>
+                    <a href="https://github.com/necatiarslan/aws-secrets-manager-vscode-extension" target="_blank"
+                        class="flex items-center gap-2 text-yellow-400 text-sm font-medium hover:underline">
+                        View on GitHub
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- View All Projects Card -->
+                <div class="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center gradient-border animate-in"
+                    style="animation-delay: 0.5s;">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-aws-orange/10 to-cyber-blue/10 flex items-center justify-center mb-4">
+                        <i data-lucide="folder-git-2" class="w-8 h-8 text-muted"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">More Projects</h3>
+                    <p class="text-muted text-sm mb-6">
+                        Explore all my open source repositories on GitHub
+                    </p>
+                    <a href="https://github.com/necatiarslan?tab=repositories" target="_blank"
+                        class="flex items-center gap-2 px-6 py-3 glass rounded-xl border border-border font-medium hover:bg-elevated transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        View All Repos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="py-32 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="animate-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="text-white">Let's </span>
+                    <span class="gradient-text">Connect</span>
+                </h2>
+                <p class="text-muted text-lg mb-12 max-w-2xl mx-auto">
+                    Interested in collaborating on data projects, AWS architecture,
+                    or contributing to open source? Let's talk.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://github.com/necatiarslan" target="_blank"
+                        class="group px-8 py-4 glass rounded-2xl font-medium flex items-center gap-3 hover:bg-elevated transition-all border border-border">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                        GitHub
+                        <i data-lucide="arrow-up-right"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/necati-arslan/" target="_blank"
+                        class="group px-8 py-4 glass rounded-2xl font-medium flex items-center gap-3 hover:bg-elevated transition-all border border-border">
+                        <i data-lucide="linkedin" class="w-6 h-6 text-[#0077b5]"></i>
+                        LinkedIn
+                        <i data-lucide="arrow-up-right"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://github.com/sponsors/necatiarslan" target="_blank"
+                        class="group px-8 py-4 bg-gradient-to-r from-aws-orange to-aws-light text-void rounded-2xl font-bold flex items-center gap-3 hover:shadow-lg hover:shadow-aws-orange/25 transition-all">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                        Sponsor
+                        <i data-lucide="arrow-up-right"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <a href="#" class="font-mono font-semibold text-lg tracking-tight">
+                        <span class="text-aws-orange">&lt;</span>
+                        <span class="text-white">Necati Arslan</span>
+                        <span class="text-aws-orange">/&gt;</span>
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/necatiarslan" target="_blank"
+                        class="text-muted hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/necati-arslan/" target="_blank"
+                        class="text-muted hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-2 text-sm text-muted">
+                    <span>Built with</span>
+                    <i data-lucide="heart" class="w-4 h-4 text-red-500"></i>
+                    <span>&</span>
+                    <span class="text-aws-orange">Open Source</span>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-border/50 text-center">
+                <p class="text-sm text-muted">
+                    © 2024 Necati Arslan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            gsap.from('.section', {
-                duration: 0.8,
-                y: 20,
-                opacity: 0,
-                stagger: 0.2,
-                ease: "power2.out"
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Parallax effect for floating orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.floating-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
             });
         });
     </script>
 </body>
+
 </html>
