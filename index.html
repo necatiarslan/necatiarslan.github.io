@@ -213,7 +213,7 @@
             <div class="flex items-center justify-between">
                 <a href="#" class="font-mono font-semibold text-lg tracking-tight">
                     <span class="text-aws-orange">&lt;</span>
-                    <span class="text-white">NA</span>
+                    <span class="text-white">Necati Arslan</span>
                     <span class="text-aws-orange">/&gt;</span>
                 </a>
 
@@ -378,7 +378,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-white">AWS Cloud</h3>
                     <p class="text-muted mb-6 leading-relaxed">
-                        Expert in AWS services including S3, Lambda, Glue, Athena, Redshift,
+                        Expert in AWS services including S3, Lambda, Glue, Step Functions, EMR,
                         EMR, and more. Building serverless and cost-effective architectures.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -389,7 +389,9 @@
                         <span
                             class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Glue</span>
                         <span
-                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Athena</span>
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">Step Functions</span>
+                        <span
+                            class="px-3 py-1 bg-aws-orange/10 text-aws-orange text-xs rounded-full font-mono">EMR</span>
                     </div>
                 </div>
 
@@ -412,7 +414,7 @@
                         <span
                             class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">ETL</span>
                         <span
-                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">dbt</span>
+                            class="px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs rounded-full font-mono">Dwh</span>
                     </div>
                 </div>
 
@@ -560,163 +562,391 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in">
-                    <div class="flex items-start justify-between mb-4">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-aws-orange/20 to-aws-light/20 flex items-center justify-center">
-                            <i data-lucide="workflow" class="w-6 h-6 text-aws-orange"></i>
-                        </div>
-                        <div class="flex items-center gap-2 text-muted text-sm">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span>★</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">AWS AI Assistant</h3>
-                    <p class="text-muted text-sm mb-4 leading-relaxed">
-                        VS Code extension for AI-powered AWS development. Manage cloud resources directly from your
-                        editor.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">VS Code</span>
-                    </div>
-                    <a href="https://github.com/necatiarslan/aws-ai-assistant" target="_blank"
-                        class="flex items-center gap-2 text-aws-orange text-sm font-medium hover:underline">
-                        View on GitHub
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.1s;">
-                    <div class="flex items-start justify-between mb-4">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-blue/20 to-cyan-500/20 flex items-center justify-center">
-                            <i data-lucide="wind" class="w-6 h-6 text-cyber-blue"></i>
-                        </div>
-                        <div class="flex items-center gap-2 text-muted text-sm">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span>★</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Airflow VS Code Extension</h3>
-                    <p class="text-muted text-sm mb-4 leading-relaxed">
-                        Manage Apache Airflow DAGs, monitor runs, and debug pipelines directly within VS Code.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Airflow</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Python</span>
-                    </div>
-                    <a href="https://github.com/necatiarslan/airflow-vscode-extension" target="_blank"
-                        class="flex items-center gap-2 text-cyber-blue text-sm font-medium hover:underline">
-                        View on GitHub
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.2s;">
-                    <div class="flex items-start justify-between mb-4">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-purple/20 to-pink-500/20 flex items-center justify-center">
-                            <i data-lucide="file-json" class="w-6 h-6 text-cyber-purple"></i>
-                        </div>
-                        <div class="flex items-center gap-2 text-muted text-sm">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span>★</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">AWS S3 Explorer</h3>
-                    <p class="text-muted text-sm mb-4 leading-relaxed">
-                        Browse, manage, and interact with AWS S3 buckets and objects from your VS Code workspace.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">S3</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS SDK</span>
-                    </div>
-                    <a href="https://github.com/necatiarslan/aws-s3-vscode-extension" target="_blank"
-                        class="flex items-center gap-2 text-cyber-purple text-sm font-medium hover:underline">
-                        View on GitHub
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project Card 4 -->
-                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.3s;">
-                    <div class="flex items-start justify-between mb-4">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
-                            <i data-lucide="table" class="w-6 h-6 text-green-400"></i>
-                        </div>
-                        <div class="flex items-center gap-2 text-muted text-sm">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span>★</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">AWS DynamoDB Explorer</h3>
-                    <p class="text-muted text-sm mb-4 leading-relaxed">
-                        Query, scan, and manage DynamoDB tables with an intuitive VS Code interface.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">DynamoDB</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">NoSQL</span>
-                    </div>
-                    <a href="https://github.com/necatiarslan/aws-dynamodb-vscode-extension" target="_blank"
-                        class="flex items-center gap-2 text-green-400 text-sm font-medium hover:underline">
-                        View on GitHub
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project Card 5 -->
-                <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in" style="animation-delay: 0.4s;">
-                    <div class="flex items-start justify-between mb-4">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
-                            <i data-lucide="key" class="w-6 h-6 text-yellow-400"></i>
-                        </div>
-                        <div class="flex items-center gap-2 text-muted text-sm">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span>★</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">AWS Secrets Manager</h3>
-                    <p class="text-muted text-sm mb-4 leading-relaxed">
-                        Securely access and manage AWS Secrets Manager secrets from within VS Code.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Security</span>
-                        <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS</span>
-                    </div>
-                    <a href="https://github.com/necatiarslan/aws-secrets-manager-vscode-extension" target="_blank"
-                        class="flex items-center gap-2 text-yellow-400 text-sm font-medium hover:underline">
-                        View on GitHub
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- View All Projects Card -->
-                <div class="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center gradient-border animate-in"
-                    style="animation-delay: 0.5s;">
+            <!-- VS Code Extensions -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8 animate-in">
                     <div
-                        class="w-16 h-16 rounded-full bg-gradient-to-br from-aws-orange/10 to-cyber-blue/10 flex items-center justify-center mb-4">
-                        <i data-lucide="folder-git-2" class="w-8 h-8 text-muted"></i>
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#007ACC]/20 to-cyber-blue/20 flex items-center justify-center">
+                        <i data-lucide="code-2" class="w-5 h-5 text-[#007ACC]"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">More Projects</h3>
-                    <p class="text-muted text-sm mb-6">
-                        Explore all my open source repositories on GitHub
-                    </p>
+                    <h3 class="text-2xl font-bold text-white">VS Code Extensions</h3>
+                    <a href="https://marketplace.visualstudio.com/publishers/NecatiARSLAN" target="_blank"
+                        class="ml-auto text-sm text-muted hover:text-white transition-colors flex items-center gap-2">
+                        View all on Marketplace
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- AWS S3 Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-aws-orange/20 to-aws-light/20 flex items-center justify-center">
+                                <i data-lucide="hard-drive" class="w-6 h-6 text-aws-orange"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-aws-orange text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>15</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AWS S3</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Browse, manage, and interact with AWS S3 buckets and objects from your VS Code workspace.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">S3</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS SDK</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-s3"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/aws-s3" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AWS CloudWatch Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.05s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-purple/20 to-pink-500/20 flex items-center justify-center">
+                                <i data-lucide="activity" class="w-6 h-6 text-cyber-purple"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-cyber-purple text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AWS CloudWatch</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            View and analyze AWS CloudWatch logs directly from VS Code with powerful filtering.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">CloudWatch</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Logs</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-cloudwatch"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/aws-cloudwatch" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AWS Lambda Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.1s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+                                <i data-lucide="zap" class="w-6 h-6 text-yellow-400"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-yellow-400 text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>2</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AWS Lambda</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Manage, invoke, and debug AWS Lambda functions directly from VS Code.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Lambda</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Serverless</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-lambda"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/aws-lambda-vscode-extension" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AWS DynamoDB Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.15s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+                                <i data-lucide="database" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-muted text-sm">
+                                <i data-lucide="star" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AWS DynamoDB</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Query, scan, and manage DynamoDB tables with an intuitive VS Code interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">DynamoDB</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">NoSQL</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-dynamodb"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/aws-dynamodb-vscode-extension" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Airflow Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.2s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-blue/20 to-cyan-500/20 flex items-center justify-center">
+                                <i data-lucide="wind" class="w-6 h-6 text-cyber-blue"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-muted text-sm">
+                                <i data-lucide="star" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Apache Airflow</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Manage Airflow DAGs, monitor runs, and debug pipelines directly within VS Code.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Airflow</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">DAG</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.airflow-vscode-extension"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/airflow-vscode-extension" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AWS Step Functions Extension -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.25s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 to-rose-500/20 flex items-center justify-center">
+                                <i data-lucide="git-branch" class="w-6 h-6 text-pink-400"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-muted text-sm">
+                                <i data-lucide="star" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AWS Step Functions</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Visualize and manage AWS Step Functions state machines from VS Code.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">TypeScript</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Step
+                                Functions</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=NecatiARSLAN.aws-step-functions"
+                                target="_blank"
+                                class="flex items-center gap-2 text-[#007ACC] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                Marketplace
+                            </a>
+                            <a href="https://github.com/necatiarslan/aws-step-functions-vscode-extension"
+                                target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Packages -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-8 animate-in">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3776AB]/20 to-yellow-500/20 flex items-center justify-center">
+                        <i data-lucide="package" class="w-5 h-5 text-[#3776AB]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Python Packages</h3>
+                    <a href="https://pypi.org/user/necatiarslan/" target="_blank"
+                        class="ml-auto text-sm text-muted hover:text-white transition-colors flex items-center gap-2">
+                        View all on PyPI
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- tablefaker -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3776AB]/20 to-yellow-500/20 flex items-center justify-center">
+                                <i data-lucide="table" class="w-6 h-6 text-[#3776AB]"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-yellow-400 text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>12</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">tablefaker</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Generate realistic synthetic table data and save as CSV, Parquet, Delta Lake, Excel, or SQL.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Python</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Faker</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Data</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://pypi.org/project/tablefaker/" target="_blank"
+                                class="flex items-center gap-2 text-[#3776AB] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                PyPI
+                            </a>
+                            <a href="https://github.com/necatiarslan/table-faker" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- dynamodb-faker -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.05s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-aws-orange/20 to-yellow-500/20 flex items-center justify-center">
+                                <i data-lucide="database" class="w-6 h-6 text-aws-orange"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-aws-orange text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">dynamodb-faker</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            Create and insert fake data into your AWS DynamoDB tables for testing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Python</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">DynamoDB</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">AWS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://pypi.org/project/dynamodb-faker/" target="_blank"
+                                class="flex items-center gap-2 text-[#3776AB] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                PyPI
+                            </a>
+                            <a href="https://github.com/necatiarslan/dynamodb-faker" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- json-datafaker -->
+                    <div class="glass rounded-3xl p-6 card-hover gradient-border animate-in"
+                        style="animation-delay: 0.1s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyber-blue/20 to-cyan-500/20 flex items-center justify-center">
+                                <i data-lucide="file-json" class="w-6 h-6 text-cyber-blue"></i>
+                            </div>
+                            <div class="flex items-center gap-2 text-cyber-blue text-sm font-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">json-datafaker</h4>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">
+                            A Python package to generate fake JSON data with customizable schemas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Python</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">JSON</span>
+                            <span class="px-2 py-1 bg-elevated text-xs text-muted rounded font-mono">Faker</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://pypi.org/project/json-datafaker/" target="_blank"
+                                class="flex items-center gap-2 text-[#3776AB] text-sm font-medium hover:underline">
+                                <i data-lucide="package" class="w-4 h-4"></i>
+                                PyPI
+                            </a>
+                            <a href="https://github.com/necatiarslan/json-datafaker" target="_blank"
+                                class="flex items-center gap-2 text-muted text-sm font-medium hover:text-white hover:underline">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Projects -->
+            <div class="text-center animate-in">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://marketplace.visualstudio.com/publishers/NecatiARSLAN" target="_blank"
+                        class="group px-6 py-3 glass rounded-xl border border-border font-medium flex items-center gap-3 hover:bg-elevated transition-colors">
+                        <i data-lucide="code-2" class="w-5 h-5 text-[#007ACC]"></i>
+                        VS Code Marketplace
+                        <i data-lucide="external-link"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://pypi.org/user/necatiarslan/" target="_blank"
+                        class="group px-6 py-3 glass rounded-xl border border-border font-medium flex items-center gap-3 hover:bg-elevated transition-colors">
+                        <i data-lucide="package" class="w-5 h-5 text-[#3776AB]"></i>
+                        PyPI Packages
+                        <i data-lucide="external-link"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
                     <a href="https://github.com/necatiarslan?tab=repositories" target="_blank"
-                        class="flex items-center gap-2 px-6 py-3 glass rounded-xl border border-border font-medium hover:bg-elevated transition-colors">
+                        class="group px-6 py-3 glass rounded-xl border border-border font-medium flex items-center gap-3 hover:bg-elevated transition-colors">
                         <i data-lucide="github" class="w-5 h-5"></i>
-                        View All Repos
+                        All GitHub Repos
+                        <i data-lucide="external-link"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                     </a>
                 </div>
             </div>
